@@ -716,8 +716,8 @@ fn count_generations(tree: &Node) -> u32 {
 fn get_nodes_at_generation(tree: &Node, seek_gen: u32, gen: u32, colour: bool) -> String {
     if gen == seek_gen {
         match tree {
-            Node::Leaf => colour!(colour, "0", gen % 7),
-            Node::Branch(_) => colour!(colour, "1", gen % 7),
+            Node::Leaf => colour!(colour, "0", gen % 8),
+            Node::Branch(_) => colour!(colour, "1", gen % 8),
         }
     } else {
         match tree {
